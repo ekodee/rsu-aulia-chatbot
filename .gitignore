@@ -1,0 +1,31 @@
+# ========================
+# 1. PYTHON & AI ENGINE
+# ========================
+rsu-ai-engine/venv/
+rsu-ai-engine/__pycache__/
+rsu-ai-engine/.env
+rsu-ai-engine/*.xlsx
+rsu-ai-engine/*.csv
+
+# ========================
+# 2. NEXT.JS INTERFACE
+# ========================
+rsu-chat-interface/node_modules/
+rsu-chat-interface/.next/
+rsu-chat-interface/.env*
+rsu-chat-interface/.env.local
+
+# ========================
+# 3. LARAVEL ADMIN
+# ========================
+rsu-chatbot-admin/vendor/
+rsu-chatbot-admin/node_modules/
+rsu-chatbot-admin/.env
+rsu-chatbot-admin/storage/*.key
+
+# ========================
+# UMUM (OS & Editor)
+# ========================
+.DS_Store
+.vscode/
+*.log

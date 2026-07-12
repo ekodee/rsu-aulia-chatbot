@@ -1,0 +1,46 @@
+=====================================================================================
+LOG EVALUASI RAGAS (6 METRICS COMPREHENSIVE)
+Metrik Pengujian : Faithfulness, Answer Relevancy, Context Recall, Context Precision, Context Entity Recall, Noise Sensitivity
+=====================================================================================
+
+[1] SKENARIO UJI KE-1
+-------------------------------------------------------------------------------------
+Q  (Pertanyaan) : Apa visi dari Rumah Sakit Umum Aulia?
+GT (Referensi)  : Visi RSU Aulia adalah menjadi Rumah Sakit yang Memberikan Pelayanan Bermutu dan Profesional Menuju Era Digitalisasi Tahun 2026.
+A  (Jawaban)    : Selamat malam.
+
+Visi Rumah Sakit Umum Aulia adalah "Menjadi Rumah Sakit yang Memberikan Pelayanan Bermutu dan Profesional Menuju Era Digitalisasi Tahun 2026."
+
+>>> DOKUMEN KONTEKS YANG DITARIK DARI ASTRA DB (Total: 7 dokumen) <<<
+
+--- Dokumen 1 ---
+Visi & Misi Visi & Misi Dalam pengembangan pelayanan medis, Rumah Sakit Umum Aulia berlandaskan pada visi dan misi yang telah ditetapkan oleh pendiri kami. Visi Menjadi Rumah Sakit yang Memberikan Pelayanan Bermutu dan Profesional Menuju Era Digitalisasi Tahun 2026. Misi Memberikan pelayanan kesehatan yang inovatif dan paripurna dalam rangka pengembangan teknologi di bidang kesehatan yang visioner. Meningkatkan kompetensi sumber daya manusia rumah sakit yang handal, terpercaya dan berorientasi
+
+--- Dokumen 2 ---
+Rumah Sakit Umum Aulia. Untuk itu diharapkan seluruh karyawan dan pimpinan senantiasa memotivasi diri untuk selalu bersemangat, dan berusaha meningkatkan kemampuan diri dalam memberikan pelayanan kesehatan yang terbaik bagi masyarakat. Atas nama direksi, kami mengucapkan terima kasih kepada seluruh karyawan Rumah Sakit Umum Aulia serta semua pihak yang telah bersatu padu mewujudkan pencapaian Visi dan Misi Rumah Sakit Aulia. Semoga Allah SWT senantiasa memberkati, melindungi dan membimbing kita
+
+--- Dokumen 3 ---
+diri untuk selalu bersemangat, dan berusaha meningkatkan kemampuan diri dalam memberikan pelayanan kesehatan yang terbaik bagi masyarakat. Atas nama direksi, kami mengucapkan terima kasih kepada seluruh karyawan Rumah Sakit Umum Aulia serta semua pihak yang telah bersatu padu mewujudkan pencapaian Visi dan Misi Rumah Sakit Umum Aulia. Semoga Allah SWT senantiasa memberkati, melindungi dan membimbing kita dalam melaksanakan tugas menuju Rumah Sakit yang lebih besar dalam mendukung pemerintah
+
+--- Dokumen 4 ---
+Sakit Umum Aulia pada tahun 2015. Komitmen Rumah Sakit Umum Aulia untuk menyediakan pelayanan kesehatan yang ramah, handal dan profesional terwujud dalam bentuk telah terakreditasinya dari lembaga Komisi Akreditasi Rumah Sakit (KARS) dengan peringkat PARIPURNA pada tahun 2020 , dan pada 2 023 ini kembali meraih peringkat PARIPURNA dari Lembaga Akreditasi Rumah Sakit Indonesia (LARSI).
+
+--- Dokumen 5 ---
+Kebijakan Privasi Kebijakan Privasi Kebijakan privasi ini menetapkan bagaimana RSU Aulia menggunakan dan melindungi informasi apa pun yang Anda berikan saat Anda menggunakan situs web ini. RSU Aulia berkomitmen untuk memastikan bahwa privasi Anda dilindungi. Jika kami meminta Anda untuk memberikan informasi tertentu yang dengannya Anda dapat diidentifikasi saat menggunakan situs web ini, maka Anda dapat yakin bahwa itu hanya akan digunakan sesuai dengan pernyataan privasi ini. RSU Aulia dapat
+
+--- Dokumen 6 ---
+Sambutan Direktur RS Sambutan Direktur RS Puji syukur kehadirat Allah SWT, yang telah melimpahkan rahmat dan karunia-Nya, sehingga Rumah Sakit Umum Aulia telah dapat menempuh perjalanan sejarah, dan diharapkan terus berkembang. Keberhasilan dan perkembangan yang telah dicapai hingga saat ini adalah berkat semangat, dedikasi dan kerja keras seluruh karyawan Rumah Sakit Umum Aulia. Untuk itu diharapkan seluruh karyawan dan pimpinan senantiasa memotivasi diri untuk selalu bersemangat, dan berusaha
+
+--- Dokumen 7 ---
+Rawat Inap Selain kehandalan para dokter dan perawat, kami percaya bahwa kenyaman saat dalam masa perawatan merupakan salah satu faktor penting yang sangat mendukung proses penyembuhan dan pemulihan pasien. Maka dari itu Rumah Sakit Umum Aulia memiliki komitmen untuk selalu menciptakan kenyamanan dalam setiap ruang perawatan kami. Seluruh ruang perawatan kami telah dilengkapi oleh berbagai fasilitas kamar untuk mendukung terciptanya kenyamanan pasien. Ruang perawatan di Rumah Sakit Umum Aulia
+
+>>> SKOR EVALUASI <<<
+1. Faithfulness          : 1.0000
+2. Answer Relevancy      : 0.9537
+3. Context Recall        : 1.0000
+4. Context Precision     : 1.0000
+5. Context Entity Recall : 1.0000
+6. Noise Sensitivity     : 0.0000
+=====================================================================================
+
+

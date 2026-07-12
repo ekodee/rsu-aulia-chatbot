@@ -1,0 +1,417 @@
+=====================================================================================
+LOG EVALUASI RAGAS (6 METRICS COMPREHENSIVE)
+Metrik Pengujian : Faithfulness, Answer Relevancy, Context Recall, Context Precision, Context Entity Recall, Noise Sensitivity
+=====================================================================================
+
+[1] SKENARIO UJI KE-1
+-------------------------------------------------------------------------------------
+Q  (Pertanyaan) : Apa visi dari Rumah Sakit Umum Aulia?
+GT (Referensi)  : Visi RSU Aulia adalah menjadi Rumah Sakit yang Memberikan Pelayanan Bermutu dan Profesional Menuju Era Digitalisasi Tahun 2026.
+A  (Jawaban)    : Selamat malam.
+
+Visi Rumah Sakit Umum Aulia adalah "Menjadi Rumah Sakit yang Memberikan Pelayanan Bermutu dan Profesional Menuju Era Digitalisasi Tahun 2026."
+
+>>> DOKUMEN KONTEKS YANG DITARIK DARI ASTRA DB (Total: 15 dokumen) <<<
+
+--- Dokumen 1 ---
+Visi & Misi Visi & Misi Dalam pengembangan pelayanan medis, Rumah Sakit Umum Aulia berlandaskan pada visi dan misi yang telah ditetapkan oleh pendiri kami. Visi Menjadi Rumah Sakit yang Memberikan Pelayanan Bermutu dan Profesional Menuju Era Digitalisasi Tahun 2026. Misi Memberikan pelayanan kesehatan yang inovatif dan paripurna dalam rangka pengembangan teknologi di bidang kesehatan yang visioner. Meningkatkan kompetensi sumber daya manusia rumah sakit yang handal, terpercaya dan berorientasi
+
+--- Dokumen 2 ---
+Rumah Sakit Umum Aulia. Untuk itu diharapkan seluruh karyawan dan pimpinan senantiasa memotivasi diri untuk selalu bersemangat, dan berusaha meningkatkan kemampuan diri dalam memberikan pelayanan kesehatan yang terbaik bagi masyarakat. Atas nama direksi, kami mengucapkan terima kasih kepada seluruh karyawan Rumah Sakit Umum Aulia serta semua pihak yang telah bersatu padu mewujudkan pencapaian Visi dan Misi Rumah Sakit Aulia. Semoga Allah SWT senantiasa memberkati, melindungi dan membimbing kita
+
+--- Dokumen 3 ---
+Sakit Umum Aulia pada tahun 2015. Komitmen Rumah Sakit Umum Aulia untuk menyediakan pelayanan kesehatan yang ramah, handal dan profesional terwujud dalam bentuk telah terakreditasinya dari lembaga Komisi Akreditasi Rumah Sakit (KARS) dengan peringkat PARIPURNA pada tahun 2020 , dan pada 2 023 ini kembali meraih peringkat PARIPURNA dari Lembaga Akreditasi Rumah Sakit Indonesia (LARSI).
+
+--- Dokumen 4 ---
+Rawat Inap Selain kehandalan para dokter dan perawat, kami percaya bahwa kenyaman saat dalam masa perawatan merupakan salah satu faktor penting yang sangat mendukung proses penyembuhan dan pemulihan pasien. Maka dari itu Rumah Sakit Umum Aulia memiliki komitmen untuk selalu menciptakan kenyamanan dalam setiap ruang perawatan kami. Seluruh ruang perawatan kami telah dilengkapi oleh berbagai fasilitas kamar untuk mendukung terciptanya kenyamanan pasien. Ruang perawatan di Rumah Sakit Umum Aulia
+
+--- Dokumen 5 ---
+Profil & Sejarah Profil & Sejarah Rumah Sakit Umum Aulia yang berlokasi di jalan Jeruk Raya No.15 Jagakarsa – Jakarta Selatan merupakan sebuah Rumah Sakit Umum Tipe C yang senantiasa selalu berusaha untuk mengembangkan serta meningkatkan jenis pelayanan medis yang diberikan agar menjadi lebih lengkap, memadai dan memuaskan . Di bawah naungan PT. Liavansya Utama , Rumah Sakit Umum Aulia mengawali kiprahnya untuk melayani kesehatan bagi masyarakat sebagai Bidan Praktik Swasta pada tahun 1979 oleh
+
+--- Dokumen 6 ---
+Survey Kepuasan Pasien Survey Kepuasan Pasien Dalam rangka upaya kami untuk selalu meningkatkan mutu pelayanan di Rumah Sakit Umum Aulia, kami sangat apresiasi dan mengharapkan bantuan Ibu & Bapak untuk memberikan suaranya melalui Survey Kepuasan Pasien yang tersedia melalui QR Code atau klik tombol dibawah ini: Ikuti Survey Silahkan mengisi data serta penilaian Ibu & Bapak terhadap pertanyaan yang ada di dalam form survey tersebut. Kami menjamin kerahasiaan data yang diberikan di dalam suvey
+
+--- Dokumen 7 ---
+Sakit yang lebih besar dalam mendukung pemerintah meningkatkan kualitas kesehatan masyarakat. dr. Bachtiar Fanani. Direktur Rumah Sakit Puji syukur kehadirat Allah SWT, yang telah melimpahkan rahmat dan karunia-Nya, sehingga Rumah Sakit Umum Aulia telah dapat menempuh perjalanan sejarah, dan diharapkan terus berkembang. Keberhasilan dan perkembangan yang telah dicapai hingga saat ini adalah berkat semangat, dedikasi dan kerja keras seluruh karyawan Rumah Sakit Umum Aulia. Untuk itu diharapkan
+
+--- Dokumen 8 ---
+rumah sakit dilakukan dengan pemilihan prioritas perbaikan tingkat rumah sakit dan pengukuran indikator serta menindaklanjuti hasil capaian indikator. Pengukuran dan analisa data indikator mutu dikumpulkan dari masing-masing Unit Kerja/Pelayanan RSU Aulia melalui sensus harian secara elektronik melalui Sistem Informasi Rumah Sakit. Adapun hasil dari pengolahan data Indikator mutu (Pengumpulan, Validasi dan Analisa) bermanfaat untuk melihat hasil capain kinerja mutu RSU Aulia serta untuk
+
+--- Dokumen 9 ---
+dari Informasi Pribadi yang disebutkan di atas, web server Kami secara otomatis mengidentifikasi komputer dengan alamat IP anda. RSU Aulia dapat menggunakan alamat IP untuk menganalisa tren/kecenderungan, mengelola Situs, melacak aktivitas pengguna dan mengumpulkan informasi demografis yang luas demi berbagai kepentingan. Perlu ditekankan bahwa alamat IP tidak terhubung dengan Informasi Pribadi. Apa yang dilakukan RSU Aulia dengan informasi yang diperoleh? RSU Aulia akan menggunakan Informasi
+
+--- Dokumen 10 ---
+Rawat Jalan Rawat Jalan Tersedianya beragam layanan Poliklinik yang ditangani oleh Dokter Spesialis kami yang sangat berpengalaman, dan didukung dengan fasilitas dan sarana medis yang mutakhir, Rumah Sakit Umum Aulia berkomitmen tinggi untuk dapat memenuhi berbagai kebutuhan pelayanan medis, dengan tetap mengedepankan mutu pelayanan yang kami berikan. Layanan Gawat Darurat Jam 0 Layanan Spesialis Poliklinik 0 Dokter Spesialis Dokter 0 Dokter Umum Dokter 0 Cari Dokter Jadwal Praktik Spesialis
+
+--- Dokumen 11 ---
+lanjut tentang Kebijakan Privasi RSU Aulia serta penggunaan Informasi Pribadi, silakan hubungi Customer Service RSU Aulia melalui nomor telpon 021-2179 8462 atau email ke info@rsaulia.com . Terima kasih. Manajemen Rumah Sakit
+
+--- Dokumen 12 ---
+5 Langkah Daftar Online RSU Aulia  Melalui website: 
+www.daftar.rsaulia.com  
+ 
+1. Kunjungi Website Pendaftaran  Kunjungi website pendaftaran online RSU Aulia di 
+www.daftar.rsaulia.com . 
+2. Pilih Jenis Pelayanan  Siapkan surat rujukan FKTP untuk kontrol poliklinik dan siapkan 
+kartu BPJS untuk kontrol pasca rawat inap, bayi baru lahir, dan registrasi pasien baru.  
+3. Lengkapi Data Pasien  Input data pasien sesuai dengan yang tertera pada web 
+www.daftar.rsaulia.com . 
+4. Buat Reservasi  Input data reservasi kunjungan selambat -lambatnya 1 Hari (H -1) sebelum 
+kunjungan.  
+5. Reservasi Berhasil  Scan Barcode reservasi di meja pendaftaran / customer service untuk 
+mencetak SEP.  
+ 
+Catatan Tambahan:  
+• Informasi dokter cuti dan tidak praktik ada di website www.rsaulia.com . 
+• Pendaftaran juga dapat dilakukan via Apps Mobile JKN.
+
+--- Dokumen 13 ---
+sakit yang handal, terpercaya dan berorientasi pada peningkatan mutu pelayanan dan keselamatan pasien. Peningkatan kualitas sarana prasarana rumah sakit dalam pelayanan kesehatan untuk keselamatan dan kepuasan pasien. Memberikan kemudahan akses pelayanan kesehatan berbasis teknologi informasi untuk meningkatkan kepuasan pasien Selain visi & misi kami tersebut, motto dalam pelayanan medis kami adalah: “Membangun Generasi”
+
+--- Dokumen 14 ---
+Jadwal Praktik dr. Aulia Hervi Anggaraini, Sp.THT KL di Poli Spesialis Telinga, Hidung & Tenggorokan (THT-KL) adalah pada hari Senin jam 09.00 - 12.00, Rabu jam 13.00 - 17.00, Sabtu jam 10.00 - 12.00.
+
+--- Dokumen 15 ---
+rumah sakit untuk mendapatkan tanggal dan waktu pertemuan. Terima kasih. Manajemen Rumah Sakit
+
+>>> SKOR EVALUASI <<<
+1. Faithfulness          : 1.0000
+2. Answer Relevancy      : 0.9537
+3. Context Recall        : 1.0000
+4. Context Precision     : 1.0000
+5. Context Entity Recall : 1.0000
+6. Noise Sensitivity     : 0.0000
+=====================================================================================
+
+
+[2] SKENARIO UJI KE-2
+-------------------------------------------------------------------------------------
+Q  (Pertanyaan) : Siapa nama dokter spesialis anak yang jadwal praktiknya hari Selasa jam 13.30?
+GT (Referensi)  : Dokter spesialis anak yang praktik pada hari Selasa jam 13.30 - Selesai adalah dr. Indra Sugiarno, Sp. A.
+A  (Jawaban)    : Selamat malam. Saya asisten virtual resmi RSU Aulia.
+
+Berdasarkan informasi yang saya miliki, dokter spesialis anak yang jadwal praktiknya hari Selasa jam 13.30 adalah **dr. Indra Sugiarno, Sp. A**. Beliau praktik di Poli Spesialis Anak.
+
+Apakah ada hal lain yang bisa saya bantu?
+
+>>> DOKUMEN KONTEKS YANG DITARIK DARI ASTRA DB (Total: 15 dokumen) <<<
+
+--- Dokumen 1 ---
+Jadwal Praktik dr. Indra Sugiarno, Sp. A di Poli Spesialis Anak adalah pada hari Selasa jam 13.30 - Selesai, Kamis jam 13.30 - Selesai.
+
+--- Dokumen 2 ---
+Jadwal Praktik dr. Vanny Fitriana Sari, Sp.A di Poli Spesialis Anak adalah pada hari Senin jam 16.00 - 19.30, Selasa jam 16.00 - 19.30, Rabu jam 16.00 - 19.30, Kamis jam 16.00 - 19.30, Jumat jam 16.00 - 19.30.
+
+--- Dokumen 3 ---
+Jadwal Praktik dr. Desrinawati M. Amin, Sp.A di Poli Spesialis Anak adalah pada hari Senin jam 12.30 - 14.30, Selasa jam 09.00 - Selesai, Rabu jam 09.00 - Selesai, Kamis jam 12.30 - 14.30, Jumat jam 08.00 - 10.00, Sabtu jam 12.30 - 15.30.
+
+--- Dokumen 4 ---
+Jadwal Praktik dr. Tutik Indaryani , Sp. A di Poli Spesialis Anak adalah pada hari Senin jam 09.00 - 13.00, Selasa jam 10.00 - 12.00, Rabu jam 10.00 - 13.00, Kamis jam 09.00 - 13.00, Jumat jam 08.00 - 13.00, Sabtu jam 09.00 - 12.00.
+
+--- Dokumen 5 ---
+Dokter 0 Cari Dokter Jadwal Praktik Spesialis Anak dr. Desrinawati M. Amin, Sp.A dr. Indra Sugiarno, Sp.A dr. Rastra, Sp.A dr. Tutik Indaryani, Sp.A dr. Vanny Fitriana Sari, M.Ked(Ped), Sp.A Spesialis Bedah Toraks Kardio Vaskuler dr. Nurima Ulya Dwita, Sp.BTKV Spesialis Bedah Umum dr. David Rimbun Siagian, Sp.B dr. Ivan Rayka, Sp.B dr. Sarwan Wibawa Mohan, Sp.B dr. Nyoman Gde Trizka Santhiadi, M.Biomed, Sp.B dr. Muhamad Azwin Kamar, B.Med.Sci, Sp.B,FICS Spesialis Gigi drg. Amelia Yasmin Kusuma
+
+--- Dokumen 6 ---
+Jadwal Praktik dr. Elisabeth Irma Dewi, Sp.M di Poli Spesialis Mata adalah pada hari Senin jam 09.00 - 11.30, Rabu jam 14.00 - 16.30, Jumat jam 14.00 - 16.30, Sabtu jam 10.00 - 12.00. (Catatan: Hari Selasa tidak praktik, hanya operasi)
+
+--- Dokumen 7 ---
+Jadwal Praktik dr. Tiara Maharani, Sp.PD di Poli Spesialis Penyakit Dalam adalah pada hari Senin jam 14.30 - 17.30, Selasa jam 14.30 - 17.30, Kamis jam 14.30 - 17.30.
+
+--- Dokumen 8 ---
+Jadwal Praktik drg. Nadya Aya Anandini di Poli Spesialis Gigi adalah pada hari Senin jam 09.00 - 16.00, Selasa jam 09.00 - 15.00, Jumat jam 13.00 - 16.00.
+
+--- Dokumen 9 ---
+Jadwal Praktik dr. Beno Putra, Sp.KFR di Poli Spesialis Rehabilitasi Medik adalah pada hari Selasa jam 13.00 - 16.00, Kamis jam 13.00 - 16.00.
+
+--- Dokumen 10 ---
+Jadwal Praktik dr. Wibowo Mustoko N., Sp.PD di Poli Spesialis Penyakit Dalam adalah pada hari Senin jam 09.00 - 13.00, Selasa jam 09.00 - 13.00, Rabu jam 09.00 - 13.00, Kamis jam 09.00 - 13.00, Jumat jam 09.00 - 13.00, Sabtu jam 08.30 - 12.00.
+
+--- Dokumen 11 ---
+Jadwal Praktik dr. Ulul Albab, Sp.OG di Poli Spesialis Kandungan & Kebidanan adalah pada hari Selasa jam 18.30 - Selesai, Kamis jam 18.30 - Selesai.
+
+--- Dokumen 12 ---
+Jadwal Praktik dr. Abdul Hakim, Sp. JP di Poli Spesialis Jantung & Pembuluh Darah adalah pada hari Senin jam 15.00 - Selesai, Selasa jam 15.00 - Selesai, Rabu jam 09.00 - 13.00, Kamis jam 15.00 - Selesai, Jumat jam 09.00 - 13.00. (Catatan: Hari Sabtu praktik hanya dengan perjanjian.)
+
+--- Dokumen 13 ---
+Jadwal Praktik dr. Bambang Sukmadi, Sp.THT-KL di Poli Spesialis Telinga, Hidung & Tenggorokan (THT-KL) adalah pada hari Senin jam 12.00 - 16.00, Rabu jam 08.00 - 12.00, Jumat jam 08.00 - 12.00.
+
+--- Dokumen 14 ---
+drg. Karina Esanya drg. Marice Herlina drg. Nadya Aya Anandini Spesialis Jantung dr. Abdul Hakim, Sp.JP dr. Bhayu Hanggadhi Nugroho, Sp.JP Spesialis Kandungan dr. Adi Guritno, Sp.OG dr. Anisya Friska Sari Hasibuan, Sp.OG dr. Irvan Arifianto,Sp.OG, MARS dr. Titi Amalia, M.Ked(OG), Sp.OG dr. Ulul Albab, Sp.OG dr. Winur Widjanti, Sp.OG Spesialis Kulit & Kelamin dr. Madana Natadiningrat, Sp.K Spesialis Laktasi dr. Maharani, M.IKom, IBCLC, Sp.Rad Spesialis Mata dr. Riko Yuniandri, Sp.M dr. Elisabet
+
+--- Dokumen 15 ---
+Jadwal Praktik dr. Muhamad Luthfi Prasetyo, Sp.B, FICS di Poli Spesialis Bedah Umum adalah pada hari Selasa jam 09.00 - 12.00 & 16.00 - 20.00, Rabu jam 09.00 - 12.00 & 17.00 - 20.00, Jumat jam 09.00 - 12.00 & 18.00 - 20.00.
+
+>>> SKOR EVALUASI <<<
+1. Faithfulness          : 0.6667
+2. Answer Relevancy      : 0.8692
+3. Context Recall        : 1.0000
+4. Context Precision     : 1.0000
+5. Context Entity Recall : 0.3333
+6. Noise Sensitivity     : 0.3333
+=====================================================================================
+
+
+[3] SKENARIO UJI KE-3
+-------------------------------------------------------------------------------------
+Q  (Pertanyaan) : Jam berapa jam besuk pasien untuk siang hari?
+GT (Referensi)  : Jam berkunjung atau besuk pasien untuk sesi siang adalah pukul 11.00 WIB – 13.00 WIB.
+A  (Jawaban)    : Selamat malam.
+
+Jam besuk pasien untuk siang hari di RSU Aulia adalah pukul 11.00 WIB – 13.00 WIB.
+
+Mohon diperhatikan juga beberapa tata tertib pengunjung lainnya:
+*   Anak di bawah usia 12 tahun dilarang masuk.
+*   Mohon untuk membatasi jumlah pengunjung yang memasuki ruang perawatan pasien. Maksimal hanya 1 orang di dalam ruang perawatan pada satu waktu dan disarankan bergantian saat mengunjungi pasien.
+*   Perawat dan petugas keamanan rumah sakit berhak untuk meminta pengunjung meninggalkan ruang perawatan jika kedapatan berada di luar jam besuk.
+
+Jika ada pertanyaan lain, jangan ragu untuk bertanya.
+
+>>> DOKUMEN KONTEKS YANG DITARIK DARI ASTRA DB (Total: 15 dokumen) <<<
+
+--- Dokumen 1 ---
+Tata Tertib Pengunjung Tata Tertib Pengunjung Jam Berkunjung / Besuk Pasien Pagi : Tidak ada jam besuk Siang : 11.00 WIB – 13.00 WIB Anak dibawah usia 12 tahun dilarang masuk. Mohon untuk membatasi jumlah pengunjung yang memasuki ruang perawatan pasien. Maksimal hanya 1 orang di dalam ruang perawatan pada satu waktu dan disarankan bergantian saat mengunjungi pasien. Perawat & petugas keamanan rumah sakit berhak untuk meminta pengunjung meninggalkan ruang perawatan jika kedapatan berada diluar
+
+--- Dokumen 2 ---
+Jadwal Praktik dr. David Rimbun Siagian, Sp.B di Poli Spesialis Bedah Umum adalah pada hari Senin jam 08.00 - 16.00, Kamis jam 08.00 - 16.00, Sabtu jam 08.00 - 12.00.
+
+--- Dokumen 3 ---
+Jadwal Praktik drg. Nadya Aya Anandini di Poli Spesialis Gigi adalah pada hari Senin jam 09.00 - 16.00, Selasa jam 09.00 - 15.00, Jumat jam 13.00 - 16.00.
+
+--- Dokumen 4 ---
+Jadwal Praktik dr. Beno Putra, Sp.KFR di Poli Spesialis Rehabilitasi Medik adalah pada hari Selasa jam 13.00 - 16.00, Kamis jam 13.00 - 16.00.
+
+--- Dokumen 5 ---
+Jadwal Praktik dr. Intan Samira, Sp. M di Poli Spesialis Mata adalah pada hari Senin jam 14.00 - 17.00, Rabu jam 09.00 - 12.00, Kamis jam 09.00 - 11.00. (Catatan: Hari Selasa tidak praktik, hanya operasi)
+
+--- Dokumen 6 ---
+Jadwal Praktik dr. Harry Jonathan Sianipar, Sp.OT di Poli Spesialis Ortopedi & Traumatologi adalah pada hari Senin jam 08.00 - 12.00, Selasa jam 12.00 - 16.00, Rabu jam 08.00 - 12.00, Kamis jam 12.00 - 16.00, Jumat jam 08.00 - 12.00, Sabtu jam 08.00 - 10.00.
+
+--- Dokumen 7 ---
+Jadwal Praktik dr. Wibowo Mustoko N., Sp.PD di Poli Spesialis Penyakit Dalam adalah pada hari Senin jam 09.00 - 13.00, Selasa jam 09.00 - 13.00, Rabu jam 09.00 - 13.00, Kamis jam 09.00 - 13.00, Jumat jam 09.00 - 13.00, Sabtu jam 08.30 - 12.00.
+
+--- Dokumen 8 ---
+Jadwal Praktik dr. Indra Sugiarno, Sp. A di Poli Spesialis Anak adalah pada hari Selasa jam 13.30 - Selesai, Kamis jam 13.30 - Selesai.
+
+--- Dokumen 9 ---
+Jadwal Praktik dr. Bambang Sukmadi, Sp.THT-KL di Poli Spesialis Telinga, Hidung & Tenggorokan (THT-KL) adalah pada hari Senin jam 12.00 - 16.00, Rabu jam 08.00 - 12.00, Jumat jam 08.00 - 12.00.
+
+--- Dokumen 10 ---
+Jadwal Praktik dr. Epifania Yoan Theresa Ginting, Sp.PD di Poli Spesialis Penyakit Dalam adalah pada hari Rabu jam 14.30 - 17.30, Jumat jam 14.30 - 17.30, Sabtu jam 14.30 - 17.30.
+
+--- Dokumen 11 ---
+Jadwal Praktik dr. Riris Marlina Siagian, Sp.N di Poli Spesialis Saraf adalah pada hari Senin jam 08.00 - 12.30, Selasa jam 08.00 - 12.30, Rabu jam 08.00 - 12.30, Kamis jam 08.00 - 12.30, Jumat jam 08.00 - 12.30, Sabtu jam 08.00 - 12.30. (Catatan: Hari Libur Nasional 08.00 - 12.00)
+
+--- Dokumen 12 ---
+Jadwal Praktik dr. Anisya FS. Hasibuan, Sp.OG di Poli Spesialis Kandungan & Kebidanan adalah pada hari Senin jam 14.30 - 16.30, Rabu jam 14.30 - 16.30, Jumat jam 14.30 - 16.30, Sabtu jam 14.00 - 16.00.
+
+--- Dokumen 13 ---
+Jadwal Praktik dr. Widyo Ari Nugroho, Sp.Rad di Poli Spesialis Radiologi adalah pada hari Selasa jam 13.00 - 15.00, Jumat jam 09.00 - 12.00, Minggu jam 09.00 - 12.00. (Catatan: Hari Minggu on-call)
+
+--- Dokumen 14 ---
+Jadwal Praktik dr. Abdul Hakim, Sp. JP di Poli Spesialis Jantung & Pembuluh Darah adalah pada hari Senin jam 15.00 - Selesai, Selasa jam 15.00 - Selesai, Rabu jam 09.00 - 13.00, Kamis jam 15.00 - Selesai, Jumat jam 09.00 - 13.00. (Catatan: Hari Sabtu praktik hanya dengan perjanjian.)
+
+--- Dokumen 15 ---
+Jadwal Praktik dr. Nurima Ulya Dwita, Sp.BTKV di Poli Spesialis Bedah Toraks & Kardio Vaskular adalah pada hari Senin jam 14.00 - 17.00, Selasa jam 14.00 - 17.00, Rabu jam 14.00 - 17.00, Kamis jam 14.00 - 17.00, Jumat jam 14.00 - 17.00.
+
+>>> SKOR EVALUASI <<<
+1. Faithfulness          : 1.0000
+2. Answer Relevancy      : 0.7183
+3. Context Recall        : 1.0000
+4. Context Precision     : 1.0000
+5. Context Entity Recall : 0.0000
+6. Noise Sensitivity     : 0.7143
+=====================================================================================
+
+
+[4] SKENARIO UJI KE-4
+-------------------------------------------------------------------------------------
+Q  (Pertanyaan) : Berapa batas waktu maksimal untuk mendaftar antrean pelayanan secara online melalui aplikasi Mobile JKN?
+GT (Referensi)  : Pendaftaran pelayanan antrean dapat dilakukan H-1 atau minimal 1 hari sebelum berkunjung ke Rumah Sakit
+A  (Jawaban)    : Selamat malam.
+
+Batas waktu maksimal untuk mendaftar antrean pelayanan secara online melalui aplikasi Mobile JKN adalah H-1 (minimal 1 hari) sebelum berkunjung ke Rumah Sakit. Artinya, pengambilan antrean melalui Mobile JKN tidak dapat dilakukan pada hari berkunjung ke Poliklinik Rumah Sakit.
+
+>>> DOKUMEN KONTEKS YANG DITARIK DARI ASTRA DB (Total: 15 dokumen) <<<
+
+--- Dokumen 1 ---
+di poli tujuan.  
+6. Pendaftaran pelayanan antrean dapat dilakukan H -1 (minimal 1 hari) sebelum berkunjung 
+ke Rumah Sakit, artinya pengambilan antrean melalui Mobile JKN tidak dapat dilakukan 
+pada hari berkunjung ke Poliklinik Rumah Sakit.  
+ 
+Penting Untuk Diketahui:  
+• Bapak/Ibu disarankan untuk menyesuaikan waktu kunjungan dengan sisa antrean 
+sehingga tidak menunggu terlalu lama di FKTP maupun FKRTL.  
+• Pastikan Password yang digunakan untuk aplikasi Mobile JKN hanya diketahui oleh 
+Bapak/Ibu sendiri beserta anggota keluarga yang terdaftar.  
+• Apabila terkendala dalam proses pendaftaran pelayanan di aplikasi Mobile JKN, 
+Bapak/Ibu dapat menghubungi BPJS Kesehatan Care Center 165.
+
+--- Dokumen 2 ---
+Petunjuk Penggunaan Fitur Pendaftaran Pelayanan di 
+Aplikasi Mobile JKN  (BPJS Kesehatan)  
+ 
+1. Lakukan "Sign In" ke dalam Aplikasi Mobile JKN.  
+2. Bapak/Ibu dapat mengambil antrean secara online  di Faskes Tingkat Pertama (FKTP) 
+maupun Faskes Rujukan Tingkat Lanjut (FKRTL) dengan klik fitur "Pendaftaran 
+Pelayanan".  
+3. Jika ingin berobat di Puskesmas, Klinik Pratama atau Dokter Praktik Perorangan, maka 
+Bapak/Ibu pilih Faskes Tingkat Pertama (FKTP), lalu pilih poli tujuan, rencana tanggal 
+kunjungan, dokter di FKTP dan ketikkan keluhan sakit Anda kemudian Klik Daftar 
+Pelay anan.  
+4. Jika ingin berobat di Poliklinik Rumah Sakit, maka Bapak/Ibu pilih Faskes Rujukan 
+Tingkat Lanjut (FKRTL), lalu pilih nomor rujukan, rencana tanggal kunjungan, dokter di 
+FKRTL kemudian Klik Daftar Pelayanan.  
+5. Muncul tampilan nomor antrean Bapak/Ibu dan jumlah antrean pasien yang harus dilayani 
+di poli tujuan.
+
+--- Dokumen 3 ---
+Petunjuk Download dan Registrasi Aplikasi Mobile 
+JKN  
+ 
+1. Buka Google Playstore / Appstore.  
+2. Ketik kata kunci "Mobile JKN", lalu download/install aplikasi Mobile JKN.  
+3. Setelah aplikasi Mobile JKN terinstall, Bapak/Ibu klik menu DAFTAR dan pilih 
+"Pendaftaran Pengguna Mobile" untuk peserta yang sudah terdaftar dalam program JKN -
+KIS dan akan melakukan registrasi aplikasi Mobile JKN.  
+4. Lengkapi formulir pendaftaran:  
+o Masukkan data identitas Anda sesuai dengan Nomor Induk Kependudukan (NIK) / 
+Nomor Kartu BPJS Kesehatan.  
+o Masukkan nomor handphone yang Anda gunakan, kemudian lakukan verifikasi data 
+dengan cara memasukkan kode yang Anda terima pada nomor handphone Anda 
+tersebut melalui SMS OTP.  
+o Masukkan Password.  
+o Masukkan Konfirmasi Password.  
+5. Apabila berhasil maka akan muncul notifikasi data Bapak/Ibu berhasil didaftarkan sebagai 
+pengguna aplikasi Mobile JKN dan akan kembali ke tampilan awal aplikasi Mobile JKN.
+
+--- Dokumen 4 ---
+• Apabil a terkendala dalam proses download dan registrasi aplikasi Mobile JKN, 
+Bapak/Ibu dapat menghubungi BPJS Kesehatan Care Center 165.
+
+--- Dokumen 5 ---
+5 Langkah Daftar Online RSU Aulia  Melalui website: 
+www.daftar.rsaulia.com  
+ 
+1. Kunjungi Website Pendaftaran  Kunjungi website pendaftaran online RSU Aulia di 
+www.daftar.rsaulia.com . 
+2. Pilih Jenis Pelayanan  Siapkan surat rujukan FKTP untuk kontrol poliklinik dan siapkan 
+kartu BPJS untuk kontrol pasca rawat inap, bayi baru lahir, dan registrasi pasien baru.  
+3. Lengkapi Data Pasien  Input data pasien sesuai dengan yang tertera pada web 
+www.daftar.rsaulia.com . 
+4. Buat Reservasi  Input data reservasi kunjungan selambat -lambatnya 1 Hari (H -1) sebelum 
+kunjungan.  
+5. Reservasi Berhasil  Scan Barcode reservasi di meja pendaftaran / customer service untuk 
+mencetak SEP.  
+ 
+Catatan Tambahan:  
+• Informasi dokter cuti dan tidak praktik ada di website www.rsaulia.com . 
+• Pendaftaran juga dapat dilakukan via Apps Mobile JKN.
+
+--- Dokumen 6 ---
+BPJS Kesehatan hingga saat ini Melayani Kesehatan Ibu dan Anak Melayani Senam Ibu hamil Melayani Pemasangan KB IUD, Implan, Suntik, MOW, MOP Kerjasama dengan DPPAPP Prov. DKI Jakarta Fasilitas Umum Area parkir mobil & motor Mushola (Ikhwan / Akhwat) ATM (BNI, DKI, Mandiri)
+
+--- Dokumen 7 ---
+Tata Tertib Pengunjung Tata Tertib Pengunjung Jam Berkunjung / Besuk Pasien Pagi : Tidak ada jam besuk Siang : 11.00 WIB – 13.00 WIB Anak dibawah usia 12 tahun dilarang masuk. Mohon untuk membatasi jumlah pengunjung yang memasuki ruang perawatan pasien. Maksimal hanya 1 orang di dalam ruang perawatan pada satu waktu dan disarankan bergantian saat mengunjungi pasien. Perawat & petugas keamanan rumah sakit berhak untuk meminta pengunjung meninggalkan ruang perawatan jika kedapatan berada diluar
+
+--- Dokumen 8 ---
+Jadwal Praktik dr. Indra Sugiarno, Sp. A di Poli Spesialis Anak adalah pada hari Selasa jam 13.30 - Selesai, Kamis jam 13.30 - Selesai.
+
+--- Dokumen 9 ---
+Jadwal Praktik dr. Muhamad Azwin Kamar, B.Med.Sci., Sp.B, FICS di Poli Spesialis Bedah Umum adalah pada hari Rabu jam 14.00 - 17.00, Kamis jam 13.00 - 17.00, Jumat jam 13.00 - 17.00.
+
+--- Dokumen 10 ---
+Jadwal Praktik dr. Epifania Yoan Theresa Ginting, Sp.PD di Poli Spesialis Penyakit Dalam adalah pada hari Rabu jam 14.30 - 17.30, Jumat jam 14.30 - 17.30, Sabtu jam 14.30 - 17.30.
+
+--- Dokumen 11 ---
+cetak dan elektronik sesuai dengan ketentuan peraturan perundang – undangan Informasi & Transaksi Elektronik (ITE). Kewajiban Pasien Pasien dan Keluarganya berkewajiban untuk mentaati segala peraturan dan tata tertib Rumah Sakit. Pasien berkewajiban untuk mematuhi segala instruksi Dokter dan Perawat dalam pengobatannya. Pasien berkewajiban memberikan informasi dengan jujur dan selengkapnya tentang penyakit yang dideritanya kepada Dokter yang merawat. Pasien dan atau penanggungnya berkewajiban
+
+--- Dokumen 12 ---
+Indikator Mutu Pelayanan Indikator Mutu Pelayanan Peningkatan mutu dan mempertahankan standar pelayanan rumah sakit dilakukan melalui penyelenggaraan tata kelola mutu rumah sakit yang baik. Komite Mutu RSU Aulia sebagai unsur organisasi non struktural yang membantu Direktur RSU Aulia dalam mengelola dan memandu program peningkatan mutu dan keselamatan pasien, serta mempertahankan standar pelayanan rumah sakit. Dalam program peningkatan mutu rumah sakit dilakukan dengan pemilihan prioritas
+
+--- Dokumen 13 ---
+Jadwal Praktik dr. Abdul Hakim, Sp. JP di Poli Spesialis Jantung & Pembuluh Darah adalah pada hari Senin jam 15.00 - Selesai, Selasa jam 15.00 - Selesai, Rabu jam 09.00 - 13.00, Kamis jam 15.00 - Selesai, Jumat jam 09.00 - 13.00. (Catatan: Hari Sabtu praktik hanya dengan perjanjian.)
+
+--- Dokumen 14 ---
+Jadwal Praktik dr. Aulia Hervi Anggaraini, Sp.THT KL di Poli Spesialis Telinga, Hidung & Tenggorokan (THT-KL) adalah pada hari Senin jam 09.00 - 12.00, Rabu jam 13.00 - 17.00, Sabtu jam 10.00 - 12.00.
+
+--- Dokumen 15 ---
+Jadwal Praktik dr. Regina Maharani Tambunan, Sp.DVE di Poli Spesialis Kulit & Kelamin adalah pada hari Senin jam 09.00 - 12.00, Rabu jam 11.00 - 14.00, Kamis jam 11.00 - 14.00, Jumat jam 11.00 - 14.00, Sabtu jam 09.00 - 12.00.
+
+>>> SKOR EVALUASI <<<
+1. Faithfulness          : 0.5000
+2. Answer Relevancy      : 0.9405
+3. Context Recall        : 1.0000
+4. Context Precision     : 0.7000
+5. Context Entity Recall : 0.3333
+6. Noise Sensitivity     : 0.0000
+=====================================================================================
+
+
+[5] SKENARIO UJI KE-5
+-------------------------------------------------------------------------------------
+Q  (Pertanyaan) : Berapa banyak tempat tidur pasien yang ada di ruang perawatan Kelas III (3)?
+GT (Referensi)  : Ruang Perawatan Kelas 3 RSU Aulia memiliki kapasitas untuk perawatan 5 pasien per ruangan, dengan fasilitas 5 Tempat Tidur
+A  (Jawaban)    : Selamat malam.
+
+Untuk ruang perawatan Kelas III (3) kami, tersedia 5 tempat tidur pasien per ruangan. Setiap ruangan juga dilengkapi dengan tirai pemisah antar pasien untuk menjaga privasi dan kenyamanan.
+
+Apakah ada hal lain yang bisa saya bantu?
+
+>>> DOKUMEN KONTEKS YANG DITARIK DARI ASTRA DB (Total: 15 dokumen) <<<
+
+--- Dokumen 1 ---
+pemisah antar pasien. Setiap ruang Perawatan Kelas 2 kami juga dilengkapi oleh berbagai sarana dan fasilitas untuk mendukung aspek kenyaman selama masa perawatan anda di Rumah Sakit Umum Aulia. Fasilitas: 3 Tempat Tidur 1 TV LED 24 inci 1 Sofa Panjang 1 Pendingin Ruangan (AC) 1 Toilet Duduk & Kamar Mandi Ruang Perawatan Kelas III Ruang Perawatan Kelas 3 kami hadir untuk perawatan 5 pasien per ruangan. Namun privacy dan kenyaman setiap pasien akan tetap terjaga dengan adanya tirai pemisah antar
+
+--- Dokumen 2 ---
+ini, dengan penggunaan elemen alam seperti kayu pada lantai, dan juga dinding dasar (dibelakang) TV, untuk menambahkan kehangatan suasana. Fasilitas: 1 Tempat Tidur Elektrik 1 TV LED 32 inci 1 Sofa Bed 2 Unit Pendingin Udara (AC) 1 Lemari Es Mini 1 Set Peralatan Makan 2 Toilet Duduk & Shower Ruang Perawatan Kelas Utama Ruang Perawatan Kelas Utama kami menghadirkan suasana kenyaman layaknya rumah sendiri, dimana semua fasilitas dan sarana kami hadirkan agar pasien dapat istirahat dengan tenang
+
+--- Dokumen 3 ---
+Pelayanan Dokter Spesialis Rehabilitasi Medik Pelayanan Dokter Spesialis Saraf Pelayanan Dokter Spesialis Telinga Hidung & Tenggorokan Pelayanan Dokter Spesialis Urologi Rawat Inap Mulai dari kelas VVIP, VIP, Utama, 1, 2, dan 3 dengan jumlah bed yang bervariasi 25 bed Perawatan Dewasa 25 bed Perawatan Ibu 15 bed Perawatan Bersama 7 bed Perawatan Anak 8 bed Instalasi Gawat Darurat (IGD) + 1 Ponek 6 bed ICU + 3 bed HCU 4 bed Operasi + 5 Recovery Room 4 bed Persalinan Perinatologi yang terdiri
+
+--- Dokumen 4 ---
+Room 4 bed Persalinan Perinatologi yang terdiri dari 8 Inkubator dan 4 Box Bayi Pelayanan Penunjang Medis Pemeriksaan Audiometri Pemeriksaan CT Scan Pemeriksaan Radiologi USG 2D & 4D ESWL Endoscopy Laparascopy Instalasi Farmasi Laboratorium Senam Hamil Vaksin dan Imunisasi Pelayanan Ambulans Pelayanan Medis Khusus Perinatologi & Blue Light ICU & HCU NICU & PICU Kamar Operasi (O.K) Kamar Bersalin (V.K) Hemodialisa Pelayanan Lainnya Melayani Kepersertaan BPJS Kesehatan hingga saat ini Melayani
+
+--- Dokumen 5 ---
+penunggu / pendamping pasien dilarang duduk atau tidur di tempat tidur pasien. Menjaga norma susila dan sopan santun. Menjaga ketertiban dan ketenangan umum. Menjaga kebersihan dan membuang sampah di tempat sampah yang telah disediakan. Tidak duduk di lantai atau tangga. Dilarang merokok di seluruh area rumah sakit (termasuk area parkir kendaraan). Kunjungan dari pihak farmasi maupun perusahaan harus ajukan surat terlebih dahulu ke pihak manajemen rumah sakit untuk mendapatkan tanggal dan waktu
+
+--- Dokumen 6 ---
+Tata Tertib Pengunjung Tata Tertib Pengunjung Jam Berkunjung / Besuk Pasien Pagi : Tidak ada jam besuk Siang : 11.00 WIB – 13.00 WIB Anak dibawah usia 12 tahun dilarang masuk. Mohon untuk membatasi jumlah pengunjung yang memasuki ruang perawatan pasien. Maksimal hanya 1 orang di dalam ruang perawatan pada satu waktu dan disarankan bergantian saat mengunjungi pasien. Perawat & petugas keamanan rumah sakit berhak untuk meminta pengunjung meninggalkan ruang perawatan jika kedapatan berada diluar
+
+--- Dokumen 7 ---
+Asuhan Keperawatan sesuai dengan standar profesi Keperawatan. Pasien berhak dirawat oleh dokter yang secara bebas dapat menentukan pendapat klinis dan pendapat etisnya, tanpa campur tangan pihak luar. Pasien berhak mengajukan pengaduan atas kualitas pelayanan yang didapatkan. Pasien memperoleh layanan yang efektif dan efisien sehingga pasien terhindar dari kerugian fisik dan materi. Pasien berhak atas “Privacy” dan kerahasiaan penyakit yang diderita termasuk data medisnya. Pasien berhak
+
+--- Dokumen 8 ---
+sakit yang handal, terpercaya dan berorientasi pada peningkatan mutu pelayanan dan keselamatan pasien. Peningkatan kualitas sarana prasarana rumah sakit dalam pelayanan kesehatan untuk keselamatan dan kepuasan pasien. Memberikan kemudahan akses pelayanan kesehatan berbasis teknologi informasi untuk meningkatkan kepuasan pasien Selain visi & misi kami tersebut, motto dalam pelayanan medis kami adalah: “Membangun Generasi”
+
+--- Dokumen 9 ---
+Jadwal Praktik dr. Beno Putra, Sp.KFR di Poli Spesialis Rehabilitasi Medik adalah pada hari Selasa jam 13.00 - 16.00, Kamis jam 13.00 - 16.00.
+
+--- Dokumen 10 ---
+rumah sakit untuk mendapatkan tanggal dan waktu pertemuan. Terima kasih. Manajemen Rumah Sakit
+
+--- Dokumen 11 ---
+Indikator Mutu Pelayanan Indikator Mutu Pelayanan Peningkatan mutu dan mempertahankan standar pelayanan rumah sakit dilakukan melalui penyelenggaraan tata kelola mutu rumah sakit yang baik. Komite Mutu RSU Aulia sebagai unsur organisasi non struktural yang membantu Direktur RSU Aulia dalam mengelola dan memandu program peningkatan mutu dan keselamatan pasien, serta mempertahankan standar pelayanan rumah sakit. Dalam program peningkatan mutu rumah sakit dilakukan dengan pemilihan prioritas
+
+--- Dokumen 12 ---
+Pasien dan atau penanggungnya berkewajiban untuk melunasi semua imbalan atas jasa pelayanan Rumah Sakit / Dokter. Pasien dan atau penanggungnya berkewajiban memenuhi hal – hal yang telah disepakati atau perjanjian / persetujuan yang telah ditandatanganinya.
+
+--- Dokumen 13 ---
+Jadwal Praktik dr. Muhamad Azwin Kamar, B.Med.Sci., Sp.B, FICS di Poli Spesialis Bedah Umum adalah pada hari Rabu jam 14.00 - 17.00, Kamis jam 13.00 - 17.00, Jumat jam 13.00 - 17.00.
+
+--- Dokumen 14 ---
+Jadwal Praktik dr. Wibowo Mustoko N., Sp.PD di Poli Spesialis Penyakit Dalam adalah pada hari Senin jam 09.00 - 13.00, Selasa jam 09.00 - 13.00, Rabu jam 09.00 - 13.00, Kamis jam 09.00 - 13.00, Jumat jam 09.00 - 13.00, Sabtu jam 08.30 - 12.00.
+
+--- Dokumen 15 ---
+Pribadi apa saja pada pihak ketiga atau pihak luar manapun, kecuali jika diharuskan oleh hukum dari pihak yang berwenang. Sebagai tambahan, RSU Aulia mengkonfigurasi daftar perangkat lunak server untuk menolak memberikan alamat-alamat e-mail dari daftar pelanggan pada siapa saja selain anggota staf Rumah Sakit yang berwenang, termasuk daftar pelanggan lainnya. Penggunaan Cookies Situs kami hanya menggunakan cookie log traffic untuk mengidentifikasi halaman mana yang sedang digunakan. Ini
+
+>>> SKOR EVALUASI <<<
+1. Faithfulness          : 1.0000
+2. Answer Relevancy      : 0.9024
+3. Context Recall        : 0.5000
+4. Context Precision     : 1.0000
+5. Context Entity Recall : 0.0000
+6. Noise Sensitivity     : 0.7500
+=====================================================================================
+
+

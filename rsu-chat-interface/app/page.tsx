@@ -35,9 +35,12 @@ export default function ChatUI() {
   // Fungsi untuk mengambil daftar riwayat dari Laravel
   const fetchSessions = useCallback(async (token: string) => {
     try {
-      const res = await fetch("http://localhost:8001/api/chat-sessions", {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_LARAVEL_API}/api/chat-sessions`,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        },
+      );
       if (res.ok) {
         const data = await res.json();
         setChatSessions(data);
@@ -98,9 +101,12 @@ export default function ChatUI() {
     if (!token) return;
 
     try {
-      const res = await fetch(`http://localhost:8001/api/chat-sessions/${id}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_LARAVEL_API}/api/chat-sessions/${id}`,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        },
+      );
 
       if (res.ok) {
         const data = await res.json();
@@ -145,14 +151,17 @@ export default function ChatUI() {
     setIsLoading(true);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          question: userMessage.content,
-          chat_history: formattedHistory,
-        }),
-      });
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_FASTAPI_API}/api/chat`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            question: userMessage.content,
+            chat_history: formattedHistory,
+          }),
+        },
+      );
 
       if (!response.body) throw new Error("No response body");
 
@@ -208,18 +217,21 @@ export default function ChatUI() {
 
       if (user) {
         const token = localStorage.getItem("auth_token");
-        const saveRes = await fetch("http://localhost:8001/api/chat-sessions", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
+        const saveRes = await fetch(
+          `${process.env.NEXT_PUBLIC_LARAVEL_API}/api/chat-sessions`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`,
+            },
+            body: JSON.stringify({
+              session_id: currentSessionId,
+              user_message: userMessage.content,
+              ai_message: fullAiResponse,
+            }),
           },
-          body: JSON.stringify({
-            session_id: currentSessionId,
-            user_message: userMessage.content,
-            ai_message: fullAiResponse,
-          }),
-        });
+        );
 
         if (saveRes.ok) {
           const saveData = await saveRes.json();
@@ -255,10 +267,13 @@ export default function ChatUI() {
       return;
 
     try {
-      const res = await fetch(`http://localhost:8001/api/chat-sessions/${id}`, {
-        method: "DELETE",
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_LARAVEL_API}/api/chat-sessions/${id}`,
+        {
+          method: "DELETE",
+          headers: { Authorization: `Bearer ${token}` },
+        },
+      );
 
       if (res.ok) {
         if (currentSessionId === id) {

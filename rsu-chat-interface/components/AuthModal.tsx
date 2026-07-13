@@ -62,14 +62,17 @@ export default function AuthModal({
         };
 
     try {
-      const res = await fetch(`http://localhost:8001${endpoint}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_LARAVEL_API}${endpoint}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(payload),
         },
-        body: JSON.stringify(payload),
-      });
+      );
 
       const data = await res.json();
 

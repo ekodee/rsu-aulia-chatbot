@@ -1,4 +1,7 @@
+"use client";
+
 import { Send } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 interface ChatInputProps {
   input: string;
@@ -7,11 +10,31 @@ interface ChatInputProps {
   isLoading: boolean;
 }
 
-export default function ChatInput({ input, setInput, onSubmit, isLoading }: ChatInputProps) {
+export default function ChatInput({
+  input,
+  setInput,
+  onSubmit,
+  isLoading,
+}: ChatInputProps) {
+  // Tambahkan useRef untuk mengontrol fokus pada textarea
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  useEffect(() => {
+    // Fokus otomatis hanya berjalan di perangkat desktop (lebar layar >= 768px).
+    // Ini mencegah browser mobile "melompat" ke bawah secara paksa saat halaman dimuat.
+    if (window.innerWidth >= 768) {
+      textareaRef.current?.focus();
+    }
+  }, []);
+
   return (
     <div className="absolute bottom-0 w-full bg-gradient-to-t from-white via-white to-transparent pt-6 pb-6 px-4">
-      <form onSubmit={onSubmit} className="max-w-3xl mx-auto flex gap-3 items-end relative shadow-lg rounded-2xl bg-white border border-gray-200 p-2">
+      <form
+        onSubmit={onSubmit}
+        className="max-w-3xl mx-auto flex gap-3 items-end relative shadow-lg rounded-2xl bg-white border border-gray-200 p-2"
+      >
         <textarea
+          ref={textareaRef} // Sematkan ref di sini
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => {
@@ -34,7 +57,8 @@ export default function ChatInput({ input, setInput, onSubmit, isLoading }: Chat
       </form>
       <div className="text-center mt-3">
         <p className="text-[11px] text-gray-400">
-          AI dapat melakukan kesalahan. Harap verifikasi informasi medis atau hubungi Customer Service.
+          AI dapat melakukan kesalahan. Harap verifikasi informasi medis atau
+          hubungi Customer Service.
         </p>
       </div>
     </div>

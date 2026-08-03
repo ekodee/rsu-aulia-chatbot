@@ -18,44 +18,35 @@ export default function ChatUI() {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  // PERBAIKAN: Ubah nilai default menjadi false untuk mobile-first
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  // State untuk Autentikasi & Kuota
   const [user, setUser] = useState<any>(null);
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [authModalMessage, setAuthModalMessage] = useState("");
   const [authMode, setAuthMode] = useState<"login" | "register">("login");
   const [guestChatCount, setGuestChatCount] = useState(0);
 
-  // --- STATE BARU UNTUK RIWAYAT CHAT ---
   const [chatSessions, setChatSessions] = useState<any[]>([]);
   const [currentSessionId, setCurrentSessionId] = useState<number | null>(null);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  // --- PERBAIKAN: Hook untuk mendeteksi ukuran layar ---
   useEffect(() => {
     const checkScreenSize = () => {
       if (window.innerWidth >= 768) {
-        setIsSidebarOpen(true); // Desktop: Buka
+        setIsSidebarOpen(true);
       } else {
-        setIsSidebarOpen(false); // Mobile: Tutup
+        setIsSidebarOpen(false);
       }
     };
 
-    // Pengecekan awal saat komponen di-mount
     checkScreenSize();
 
-    // Dengarkan perubahan ukuran layar (misal rotasi HP atau resize browser)
     window.addEventListener("resize", checkScreenSize);
 
-    // Cleanup listener
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
-  // ----------------------------------------------------
 
-  // Fungsi untuk mengambil daftar riwayat dari Laravel
   const fetchSessions = useCallback(async (token: string) => {
     try {
       const res = await fetch(
@@ -86,11 +77,13 @@ export default function ChatUI() {
     }
   }, [messages, fetchSessions]);
 
+  // PERBAIKAN: Hanya scroll jika ada pesan
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (messages.length > 0) {
+      messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
-  // --- FUNGSI UNTUK MEMBUKA MODAL LOGIN/REGISTER ---
   const handleOpenAuth = (mode: "login" | "register") => {
     setAuthMode(mode);
     setAuthModalMessage("");
@@ -258,10 +251,9 @@ export default function ChatUI() {
 
         if (saveRes.ok) {
           const saveData = await saveRes.json();
-          // Jika ini chat baru, Laravel akan mengembalikan ID sesi baru
           if (!currentSessionId) {
             setCurrentSessionId(saveData.session_id);
-            fetchSessions(token as string); // Refresh sidebar agar judul baru muncul
+            fetchSessions(token as string);
           }
         }
       }
@@ -310,8 +302,9 @@ export default function ChatUI() {
     }
   };
 
+  // PERBAIKAN: Gunakan h-[100dvh] agar aman di browser mobile
   return (
-    <div className="flex h-screen bg-white font-sans text-gray-900 overflow-hidden">
+    <div className="flex h-[100dvh] bg-white font-sans text-gray-900 overflow-hidden">
       <Sidebar
         isOpen={isSidebarOpen}
         onNewChat={handleNewChat}

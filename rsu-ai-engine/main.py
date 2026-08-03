@@ -451,20 +451,20 @@ def format_docs(docs):
     print("\n" + "="*70)
     print("HASIL PENCARIAN KEMIRIPAN VEKTOR (RETRIEVAL)")
     print("="*70)
-    print(f"Metode Pencarian   : Similarity Search (Cosine/Dot Product)")
+    print(f"Metode Pencarian   : Maximal Marginal Relevance (MMR)")
     print(f"Target Jumlah (k)  : 7")
     print(f"Dokumen Ditemukan  : {len(docs)}")
     print("-" * 70)
-    print("[Top 3 Dokumen Teratas]:")
+    print("[Top 7 Dokumen Teratas]:")
     
-    # Hanya tampilkan 3 dokumen teratas agar rapi di screenshot
+    # Tampilkan 7 dokumen teratas dengan preview penuh
     for i, doc in enumerate(docs[:7]):
-        preview = doc.page_content
         print(f"  [{i+1}] Source : {doc.metadata.get('source', 'Unknown')}")
-        print(f"      Preview: {preview}")
+        print(f"      Preview:\n{doc.page_content}\n")
     
     print("="*70 + "\n")
-    return "\n\n".join(doc.page_content for doc in docs)
+    return "\n\n".join(doc.page_content for doc in docs[:7])
+
 
 answer_chain = prompt | llm | StrOutputParser()
 

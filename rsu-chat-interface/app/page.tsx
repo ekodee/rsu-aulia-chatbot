@@ -17,7 +17,9 @@ export default function ChatUI() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
+  // PERBAIKAN: Ubah nilai default menjadi false untuk mobile-first
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   // State untuk Autentikasi & Kuota
   const [user, setUser] = useState<any>(null);
@@ -31,6 +33,27 @@ export default function ChatUI() {
   const [currentSessionId, setCurrentSessionId] = useState<number | null>(null);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  // --- PERBAIKAN: Hook untuk mendeteksi ukuran layar ---
+  useEffect(() => {
+    const checkScreenSize = () => {
+      if (window.innerWidth >= 768) {
+        setIsSidebarOpen(true); // Desktop: Buka
+      } else {
+        setIsSidebarOpen(false); // Mobile: Tutup
+      }
+    };
+
+    // Pengecekan awal saat komponen di-mount
+    checkScreenSize();
+
+    // Dengarkan perubahan ukuran layar (misal rotasi HP atau resize browser)
+    window.addEventListener("resize", checkScreenSize);
+
+    // Cleanup listener
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+  // ----------------------------------------------------
 
   // Fungsi untuk mengambil daftar riwayat dari Laravel
   const fetchSessions = useCallback(async (token: string) => {
@@ -305,7 +328,7 @@ export default function ChatUI() {
           isSidebarOpen={isSidebarOpen}
           setIsSidebarOpen={setIsSidebarOpen}
           onLogout={handleLogout}
-          onOpenAuth={handleOpenAuth} // KABEL TERSAMBUNG DI SINI
+          onOpenAuth={handleOpenAuth}
         />
 
         <MessageList
@@ -314,7 +337,7 @@ export default function ChatUI() {
           user={user}
           guestChatCount={guestChatCount}
           onSuggestionClick={(suggestion) => setInput(suggestion)}
-          onOpenAuth={handleOpenAuth} // KABEL TERSAMBUNG DI SINI JUGA
+          onOpenAuth={handleOpenAuth}
         />
 
         <ChatInput

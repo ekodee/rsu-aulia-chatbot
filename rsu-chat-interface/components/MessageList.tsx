@@ -11,7 +11,7 @@ interface MessageListProps {
   user: any;
   guestChatCount: number;
   onSuggestionClick: (suggestion: string) => void;
-  onOpenAuth: (mode: "login" | "register") => void; // DITAMBAHKAN
+  onOpenAuth: (mode: "login" | "register") => void;
 }
 
 export default function MessageList({
@@ -20,13 +20,15 @@ export default function MessageList({
   user,
   guestChatCount,
   onSuggestionClick,
-  onOpenAuth, // DITERIMA
+  onOpenAuth,
 }: MessageListProps) {
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  // Auto-scroll
+  // PERBAIKAN: Auto-scroll HANYA berjalan jika ada pesan atau AI sedang mengetik
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (messages.length > 0 || isLoading) {
+      messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
   }, [messages, isLoading]);
 
   return (
@@ -45,7 +47,7 @@ export default function MessageList({
           <WelcomeScreen
             onSuggestionClick={onSuggestionClick}
             isGuest={!user}
-            onOpenAuth={onOpenAuth} // DITERUSKAN KE WELCOME SCREEN
+            onOpenAuth={onOpenAuth}
           />
         )}
 
